@@ -3,16 +3,14 @@ TUTORIAL:
 
 SDL_GUI_API v 0.61
 
-IF YOU DONT KNOW WHAT SOMETHING MEANS DONT CALL ME SHUT UP AND READ THE WHOLE THING FIRST
-
 TO USE LIBRARY, #include "SDL_GUI.h"
 
 THROUGHOUT THE THING ONLY DYNAMICALLY ALLOCATE ELEMENTS
-THAT IS, USE GElement* element = new GElement( args... ) //rather than just making stack instances like a 13 year old wannabe programmer
+THAT IS, USE GElement* element = new GElement( args... ) //rather than just making stack instances
 
 A FRAME IS ALSO AN ELEMENT SOMETIMES THEY ARE USED INTERCHANGEABLY
 IMPORTANT NOTES ARE GIVEN AT END. YOU HAVE TO READ THEM.
-YOU CAN ADD ELEMENTS IN FRAME. YOU CAN ADD ONLY FRAMES TO WINDOW. YOU ___CANNOT___ ADD WINDOW TO WINDOW OR WINDOW TO FRAME THAT IS FUCKING ILLEGAL
+YOU CAN ADD ELEMENTS IN FRAME. YOU CAN ADD ONLY FRAMES TO WINDOW. YOU ___CANNOT___ ADD WINDOW TO WINDOW OR WINDOW TO FRAME
 
 Elements provided:
 GButton
@@ -112,7 +110,7 @@ ELEMENT_ATTRIBUTES:
 
 	A set of bools that define what action to take given some other action happened.
 	To set attributes just call element_name->SetAttributes(attributes_instance)
-	Read the ELEMENT_ATTRIBUTES.h file. They are pretty self explanatory.
+	Read the ELEMENT_ATTRIBUTES.h file. They are pretty self explanatory check the header file.
 
 OKAY, OKAY, IMPORTANT NOTES:
 
@@ -120,7 +118,7 @@ OKAY, OKAY, IMPORTANT NOTES:
 	This ordering remains same unless the ELEMENT_ATTRIBUTES TELL IT TO SHIFT IT UPWARDS OR DOWNWARDS
 	Not same for Window. Window is chill.
 
-	NEVER CALL FUNCTIONS THAT I DID NOT LIST.
+	FUNCTIONS THAT I DID NOT LIST MIGHT CAUSE MEMORY LEAKS BECAUSE THEY ARENT TESTED YET.
 
 
 
